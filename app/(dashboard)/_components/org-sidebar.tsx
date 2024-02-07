@@ -20,14 +20,15 @@ export const OrgSidebar = () => {
     const favorites = searchParams.get("favorites")
 
     return (
-        <div className="hidden lg:flex flex-col space-y-6 w-[206px] pl-3 pt-5">
+        <div className="hidden lg:flex flex-col space-y-6 w-[206px] pl-3 pt-5 shadow-xl">
             <Link href={"/"}>
                 <div className="flex items-center gap-x-2">
                     <Image 
                         src={"/logo.png"}
                         alt="logo"
-                        height={50}
-                        width={50}
+                        height={45}
+                        width={45}
+                        className="object-cover"
                     />
                     <span className={cn(
                         "font-[500] text-2xl text-slate-800",

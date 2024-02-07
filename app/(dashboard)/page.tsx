@@ -1,9 +1,27 @@
-import React from 'react'
+"use client"
+import { useOrganization } from '@clerk/nextjs'
+import { EmptyOrg } from './_components/empty-org'
 
-const DashboardPage = () => {
+interface DashboardPageProps {
+  searchParams: {
+    search?: string;
+    favorites?: string;
+  }
+}
+
+const DashboardPage = ({
+  searchParams
+}: DashboardPageProps) => {
+
+  const { organization } = useOrganization()
+
   return (
-    <div>
-        Dashboard Root Page
+    <div className='flex-1 h-[calc(100vh-80px)] p-6'>
+        {!organization ? (
+          <EmptyOrg />
+        ) : (
+          <p>Hola!</p>
+        )}
     </div>
   )
 }
