@@ -16,7 +16,7 @@ export const NewButton = () => {
             <DialogTrigger asChild>
                 <div className="aspect-square">
                     <Hint label="Create Organization" side="right" align="start" sideOffset={18}>
-                        <button className="bg-white/25 h-[100%] w-[100%] rounded-md flex items-center justify-center opacity-60 hover:opacity-100 transition">
+                        <button className="bg-white/25 h-[37px] w-[37px] rounded-md flex items-center justify-center opacity-60 hover:opacity-100 transition">
                             <Plus className="text-slate-50" />
                         </button>
                     </Hint>
